@@ -38,4 +38,4 @@ Remember that you can get assistance from your mentor, the [forums][udacity-foru
 [pac-man-a-star-gif]: assets/pacman.gif "Pac-Man using A* search to find the fastest way to all the food."
 
 [//]: # (Links to resources)
-[pac-man-search-code]: https://d17h27t6h515a5.cloudfront.net/topher/2017/January/587da420_pacman/pacman.zip
+[pac-man-search-code]: https://inst.eecs.berkeley.edu/~cs188/fa10/projects/search/search.zip
