@@ -34,8 +34,8 @@ Remember that you can get assistance from your mentor, the [forums][udacity-foru
 [udacity-aind-slack]: https://ai-nd.slack.com/
 
 [//]: # (Links to assets)
-[pac-man-logo-jpg]: https://d17h27t6h515a5.cloudfront.net/topher/2017/January/586c50e0_pacman/pacman.jpg "Pac-Man Logo"
-[pac-man-a-star-gif]: https://d17h27t6h515a5.cloudfront.net/topher/2017/January/586c6e63_pacman/pacman.gif "Pac-Man using A* search to find the fastest way to all the food."
+[pac-man-logo-jpg]: assets/pacman.jpg "Pac-Man Logo"
+[pac-man-a-star-gif]: assets/pacman.gif "Pac-Man using A* search to find the fastest way to all the food."
 
 [//]: # (Links to resources)
 [pac-man-search-code]: https://d17h27t6h515a5.cloudfront.net/topher/2017/January/587da420_pacman/pacman.zip
