@@ -117,3 +117,20 @@ bfs = breadthFirstSearch
 dfs = depthFirstSearch
 astar = aStarSearch
 ucs = uniformCostSearch
+
+# Private helpers
+
+def pathTarget(path):
+  return path[0]
+
+def pathActions(path):
+  return path[1]
+
+def pathCost(path):
+  return path[2]
+
+def initPath(state):
+  return (state, [], 0)
+
+def makePath(successor):
+  return (successor[0], [ successor[1] ], successor[2])
