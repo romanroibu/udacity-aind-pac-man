@@ -134,9 +134,52 @@ def breadthFirstSearch(problem):
   Search the shallowest nodes in the search tree first.
   [2nd Edition: p 73, 3rd Edition: p 82]
   """
-  "*** YOUR CODE HERE ***"
-  util.raiseNotDefined()
-      
+
+  start = problem.getStartState()
+  startPath = initPath(start)
+
+  # step 1: initialize the frontier using the initial state of the problem
+  frontier = util.Queue()
+  frontierSet = set()
+
+  frontier.push(startPath)
+  frontierSet.add(start)
+
+  # step 2: initialize the explored set to be empty
+  explored = set()
+
+  while True:
+    # step 3: if the frontier is empty, return failure
+    if frontier.isEmpty():
+      return False
+
+    # step 4: choose a leaf node and remove it from the frontier
+    path = frontier.pop()
+    target  = pathTarget(path)
+    actions = pathActions(path)
+    frontierSet.remove(target)
+
+    # step 5: if the node contans a goal state, return the corresponding solution
+    if problem.isGoalState(target):
+      return actions
+
+    # step 6: add the node to the explored set
+    explored.add(target)
+
+    # step 7: expand the node
+    successors = problem.getSuccessors(target)
+
+    # step 8: add the resulting nodes to the frontier, if not in frontier or explored set
+    for nextPath in map(makePath, successors):
+      nextTarget = pathTarget(nextPath)
+      if not nextTarget in explored and not nextTarget in frontierSet:
+        nextActions = actions + pathActions(nextPath)
+        nextCost = pathCost(nextPath)
+        nextTuple = (nextTarget, nextActions, nextCost)
+
+        frontier.push(nextTuple)
+        frontierSet.add(nextTarget)
+
 def uniformCostSearch(problem):
   "Search the node of least total cost first. "
   "*** YOUR CODE HERE ***"
